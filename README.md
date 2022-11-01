@@ -49,3 +49,8 @@ The file never gets uploaded to R2:
 (log) Returning response
 ```
 
+If we generate data on the Worker and avoid tee, everything works as expected:
+
+```javascript
+let data = new ArrayBuffer(100 * Math.pow(10, 6));
+```
