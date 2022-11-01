@@ -1,3 +1,13 @@
 name = "cloudflare-worker-wait-until-repro"
 main = "src/index.ts"
 compatibility_date = "2022-11-01"
+usage_model = "unbound"
+workers_dev = true
+
+[vars]
+S3_BUCKET_NAME = "<BUCKET_NAME>"
+
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "<BUCKET_NAME>"
+preview_bucket_name = "<BUCKET_NAME>"
