@@ -54,3 +54,8 @@ If we generate data on the Worker and avoid tee, everything works as expected:
 ```javascript
 let data = new ArrayBuffer(100 * Math.pow(10, 6));
 ```
+
+### Things tried to debug this
+
+* Tried running this in workerd (main branch) using the new `--experimental-local` flag. Works as expected. Maybe Cloudflare is running an older version?
+* `wrangler publish --latest` doesn't help.
