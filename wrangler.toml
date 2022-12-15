@@ -1,13 +1,12 @@
-name = "cloudflare-worker-wait-until-repro"
+name = "teerepro"
 main = "src/index.ts"
-compatibility_date = "2022-11-01"
+compatibility_date = "2022-11-03"
+account_id = "051c3de644afdf46e7d7ca330aabda58"
 usage_model = "unbound"
 workers_dev = true
-
-[vars]
-S3_BUCKET_NAME = "<BUCKET_NAME>"
+compatibility_flags = [ "transformstream_enable_standard_constructor", "streams_enable_constructors" ]
 
 [[r2_buckets]]
-binding = "MY_BUCKET"
-bucket_name = "<BUCKET_NAME>"
-preview_bucket_name = "<BUCKET_NAME>"
+binding = 'scudbucket' # <~ valid JavaScript variable name
+bucket_name = 'scudbucket'
+preview_bucket_name = 'testbucket'
